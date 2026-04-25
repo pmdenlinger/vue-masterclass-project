@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from 'tailwindcss/defaultTheme.js'
+
 export default {
-  content: ["./index.html", "./src/**/*.{vue,js,ts}"],
+  content: ['./index.html', './src/**/*.{vue,js,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 }
-
