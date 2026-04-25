@@ -25,6 +25,37 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 npm install
 ```
 
+## Course Alignment (Udemy Vue Masterclass)
+
+Course: [Vue Masterclass](https://www.udemy.com/course/vue-masterclass/)
+
+This repo is intentionally kept minimal while following the course.
+
+### Current Setup Policy
+
+- Keep only core Vue + Vite setup.
+- Keep linting, formatting, and testing enabled.
+- Add TypeScript and other advanced tooling only when introduced in the course.
+
+### Milestone Checkpoints
+
+- Milestone 1: Vue fundamentals
+  - Focus on components, props, events, and state.
+  - Avoid adding extra configuration not covered yet.
+- Milestone 2: Quality tools in daily workflow
+  - Run `npm run lint` regularly.
+  - Use format-on-save (Prettier) in VS Code.
+  - Run `npm run test:unit` as tests are introduced.
+- Milestone 3: Advanced tooling (later lessons)
+  - Add TypeScript settings only when the course introduces them.
+  - Add any additional project config in the same lesson order as the instructor.
+
+### Quick Weekly Sync
+
+- Compare your project structure to the instructor's version.
+- If something differs, prefer reverting to the lesson baseline first.
+- Keep commits small and lesson-based (one concept per commit when possible).
+
 ### Compile and Hot-Reload for Development
 
 ```sh
