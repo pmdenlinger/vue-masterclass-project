@@ -9,7 +9,7 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
-<style>
+<style scoped>
 h1 {
   color: purple;
 }
