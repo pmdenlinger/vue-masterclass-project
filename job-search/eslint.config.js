@@ -23,7 +23,28 @@ export default defineConfig([
   },
 
   js.configs.recommended,
-  ...pluginVue.configs['flat/essential'],
+  ...pluginVue.configs['flat/recommended'],
+
+  {
+    name: 'app/strict-learning-rules',
+    rules: {
+      'no-console': 'error',
+      'no-debugger': 'error',
+      eqeqeq: ['error', 'always'],
+      'vue/html-self-closing': [
+        'error',
+        {
+          html: {
+            void: 'always',
+            normal: 'always',
+            component: 'always',
+          },
+          svg: 'always',
+          math: 'always',
+        },
+      ],
+    },
+  },
 
   {
     ...pluginVitest.configs.recommended,
