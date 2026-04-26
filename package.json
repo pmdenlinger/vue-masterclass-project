@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@testing-library/vue": "^8.1.0",
+    "autoprefixer": "^10.5.0",
+    "eslint-plugin-vitest-globals": "^1.6.1",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^4.2.4"
+  }
+}
