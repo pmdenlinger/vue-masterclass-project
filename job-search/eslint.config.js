@@ -47,8 +47,13 @@ export default defineConfig([
   },
 
   {
+    ...pluginVitest.configs.env,
+    files: ['src/**/__tests__/*', 'tests/**/*.{js,mjs,cjs,jsx,ts,tsx}'],
+  },
+
+  {
     ...pluginVitest.configs.recommended,
-    files: ['src/**/__tests__/*'],
+    files: ['src/**/__tests__/*', 'tests/**/*.{js,mjs,cjs,jsx,ts,tsx}'],
   },
 
   ...pluginOxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
