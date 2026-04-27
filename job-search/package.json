@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "test:unit": "vitest --coverage --run",
     "test:watch": "vitest --coverage",
+    "setup:git-hooks": "node scripts/setup-git-hooks.mjs",
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -eu
+
+staged_files=$(git diff --cached --name-only)
+ignored_files=''
+
+while IFS= read -r file; do
+  [ -z "$file" ] && continue
+
+  if git check-ignore -q -- "$file"; then
+    ignored_files="${ignored_files}${file}
+"
+  fi
+done <<EOF
+$staged_files
+EOF
+
+if [ -n "$ignored_files" ]; then
+  printf '%s\n' 'Commit blocked: ignored files are staged.' 'Remove these files from the index before committing:' "$ignored_files" >&2
+  exit 1
+fi
