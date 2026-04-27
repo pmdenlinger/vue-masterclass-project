@@ -48,7 +48,15 @@ export default {
   data() {
     return {
       company: "Bobo Careers",
-      url: "https://careers.google.com"
+      url: "https://careers.google.com",
+      menuItems: [
+        "Teams",
+        "Locations",
+        "Life at Bobo Corp",
+        "How we hire",
+        "Students",
+        "Jobs",
+      ]
     }
   }
 }
