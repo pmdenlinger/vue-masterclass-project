@@ -4,6 +4,11 @@
 
 <script>
 export default {
-  name: "ActionButton"
+  name: "ActionButton",
+  methods: {
+    handleClick() {
+      console.log("I've been clicked");
+    },
+  }
 }
 </script>
