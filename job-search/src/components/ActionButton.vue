@@ -1,15 +1,19 @@
 <template>
-  <button class="rounded border-0 px-5 py-3 font-medium text-white bg-brand-blue-1 hover:shadow-blue"
-  v-on:click="handleClick">Sign in</button>
+  <button
+    class="rounded border-0 px-5 py-3 font-medium text-white bg-brand-blue-1 hover:shadow-blue"
+    @click="handleClick"
+  >
+    Sign in
+  </button>
 </template>
 
 <script>
 export default {
-  name: "ActionButton",
+  name: 'ActionButton',
   methods: {
     handleClick() {
-      console.log("I've been clicked");
+      console.log("I've been clicked")
     },
-  }
+  },
 }
 </script>
