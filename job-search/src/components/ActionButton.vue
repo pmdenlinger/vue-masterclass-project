@@ -1,5 +1,5 @@
 <template>
-  <button class="primary">
+  <button :class="{ primary: true }">
     {{ text }}
   </button>
 </template>
@@ -18,7 +18,7 @@ button {
 }
 
 .primary {
-  @apply border-0  text-white bg-brand-blue-1 hover:shadow-blue";
-  >
+  @apply border-0  text-white bg-brand-blue-1 hover:shadow-blue;
 }
+
 </style>
