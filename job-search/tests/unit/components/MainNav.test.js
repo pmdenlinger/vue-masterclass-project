@@ -30,10 +30,11 @@ describe('MainNav', () => {
   })
 
   describe('when the user logs in', () => {
-    it('displays user profile picture', async () => {
+    it('displays user profile picture after clicking sign in', async () => {
       const wrapper = mount(MainNav)
 
-      await wrapper.vm.loginUser()
+      const logInButton = wrapper.findComponent(ActionButton)
+      await logInButton.trigger('click')
 
       expect(wrapper.findComponent(ProfileImage).exists()).toBe(true)
       expect(wrapper.findComponent(ActionButton).exists()).toBe(false)
