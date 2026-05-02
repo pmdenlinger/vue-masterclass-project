@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     buttonClass() {
-      return { primary: this.primary }
+      return { primary: this.primary, secondary: !this.primary }
     },
   },
 }
@@ -33,5 +33,9 @@ button {
 
 .primary {
   @apply border-0  text-white bg-brand-blue-1 hover:shadow-blue;
+}
+
+.secondary {
+  @apply bg-transparent text-brand-blue-1 hover:text-brand-blue-2 hover:text-white;
 }
 </style>
