@@ -11,7 +11,7 @@
           </ul>
         </nav>
         <div class="ml-auto flex h-full items-center">
-          <action-button v-if="isLoggedIn" />
+          <action-button v-if="!isLoggedIn" />
         </div>
       </div>
     </div>
