@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ primary: true }">
+  <button :class="{ primary: primary }">
     {{ text }}
   </button>
 </template>
@@ -8,11 +8,15 @@
 export default {
   name: 'ActionButton',
   props: ['text'],
+  data() {
+    return {
+      primary: true,
+    }
+  },
 }
 </script>
 
 <style scoped>
-
 button {
   @apply rounded px-5 py-3 font-medium;
 }
@@ -20,5 +24,4 @@ button {
 .primary {
   @apply border-0  text-white bg-brand-blue-1 hover:shadow-blue;
 }
-
 </style>
