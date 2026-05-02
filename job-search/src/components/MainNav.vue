@@ -10,7 +10,9 @@
             </li>
           </ul>
         </nav>
-        <div class="ml-auto flex h-full items-center"><action-button /></div>
+        <div class="ml-auto flex h-full items-center">
+          <action-button v-if="isLoggedIn" />
+        </div>
       </div>
     </div>
   </header>
@@ -28,6 +30,7 @@ export default {
       company: 'Bobo Careers',
       url: 'https://careers.google.com',
       menuItems: ['Teams', 'Locations', 'Life at Bobo Corp', 'How we hire', 'Students', 'Jobs'],
+      isLoggedIn: false,
     }
   },
 }
