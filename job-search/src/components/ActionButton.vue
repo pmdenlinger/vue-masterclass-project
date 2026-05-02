@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ primary: primary }">
+  <button :class="buttonClass">
     {{ text }}
   </button>
 </template>
@@ -7,11 +7,21 @@
 <script>
 export default {
   name: 'ActionButton',
-  props: ['text'],
+  props: {
+    text: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       primary: true,
     }
+  },
+  computed: {
+    buttonClass() {
+      return { primary: this.primary }
+    },
   },
 }
 </script>
